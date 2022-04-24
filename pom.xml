@@ -12,6 +12,7 @@
     <artifactId>tracking</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>tracking</name>
+    <packaging>war</packaging>
     <description>Projet de tracking d'evenements</description>
 
     <properties>
