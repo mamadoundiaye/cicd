@@ -39,6 +39,11 @@
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>${jacoco.version}</version>
         </dependency>
+	<!--credentials-->
+	<dependency>
+   	    <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>credentials</artifactId>
+        </dependency>
 
         <!-- archi test-->
         <dependency>
