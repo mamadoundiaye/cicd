@@ -22,4 +22,9 @@ class BasicResourceTest {
     void basic() {
         Assertions.assertThat(mockMvc).isNotNull();
     }
+    
+    @Test
+    void basics() {
+        Assertions.assertThat(mockMvc).isNull();
+    }
 }

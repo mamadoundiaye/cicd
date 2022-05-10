@@ -1,27 +1,27 @@
 package sn.ept.git.seminaire.cicd.mapper;
 
-import sn.ept.git.seminaire.cicd.data.SocieteDTOTestData;
-import sn.ept.git.seminaire.cicd.dto.SocieteDTO;
-import sn.ept.git.seminaire.cicd.mappers.SocieteMapper;
-import sn.ept.git.seminaire.cicd.models.Societe;
+import sn.ept.git.seminaire.cicd.data.SiteDTOTestData;
+import sn.ept.git.seminaire.cicd.dto.SiteDTO;
+import sn.ept.git.seminaire.cicd.mappers.SiteMapper;
+import sn.ept.git.seminaire.cicd.models.Site;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class SocieteDTOMapperTest extends  MapperBaseTest{
+class SiteDTOMapperTest extends  MapperBaseTest{
 
-    SocieteDTO dto;
-    Societe entity;
+    SiteDTO dto;
+    Site entity;
     
     @Autowired
-    private SocieteMapper mapper;
+    private SiteMapper mapper;
     
 
 
     @BeforeEach
     void setUp() {
-        dto = SocieteDTOTestData.defaultDTO();
+        dto = SiteDTOTestData.defaultDTO();
         
         
     }
@@ -32,7 +32,6 @@ class SocieteDTOMapperTest extends  MapperBaseTest{
         assertThat(entity)
                 .isNotNull()
                 .usingRecursiveComparison()
-                .ignoringFields("sites", "exercices")
                 .isEqualTo(dto);
     }
 
