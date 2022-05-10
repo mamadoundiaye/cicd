@@ -10,8 +10,9 @@
     </parent>
     <groupId>sn.ept.git.seminaire.cicd</groupId>
     <artifactId>tracking</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>tracking</name>
+    <packaging>war</packaging>
     <description>Projet de tracking d'evenements</description>
 
     <properties>
@@ -38,14 +39,22 @@
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>${jacoco.version}</version>
         </dependency>
+	<!--credentials
+	<dependency>
+   	    <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>credentials</artifactId>
+	    <version>${jacoco.version}</version>
+        </dependency>
+	-->
 
-        <!-- archi test-->
+        <!-- archi test -->
         <dependency>
             <groupId>com.tngtech.archunit</groupId>
             <artifactId>archunit-junit5-api</artifactId>
             <version>${archunit-junit5.version}</version>
             <scope>test</scope>
         </dependency>
+	
 
         <dependency>
             <groupId>com.tngtech.archunit</groupId>
@@ -230,5 +239,11 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+    <repository>
+        <id>maven-proxy</id>
+        <url>http://10.160.2.145:8081/repository/maven-proxy/</url>
+    </repository>
+    </repositories>
 
 </project>
